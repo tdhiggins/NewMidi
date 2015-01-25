@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>NewMidi</h1>
+<h2>Melody Generator</h2>
+<br>
+<form method="post" action="{{ url_for('information') }}">
+    <label for="key">Key:</label>
+    <select name="key">
+        <option value="c">C</option>
+        <option value="cs">C#/Db</option>
+        <option value="d">D</option>
+        <option value="ds">D#/Eb</option>
+        <option value="e">E</option>
+        <option value="f">F</option>
+        <option value="fs">F#/Gb</option>
+        <option value="g">G</option>
+        <option value="gs">G#/Ab</option>
+        <option value="a">A</option>
+        <option value="as">A#/Bb</option>
+        <option value="b">B</option>
+    </select>
+    <br>
+
+    <label for="m">Tonality:</label>
+    <select name="m">
+        <option value="major">Major</option>
+        <option value="minor">Minor</option>
+    </select>
+    <br>
+
+    <label for="maxD">Maximum distance between consecutive notes:</label>
+    <input type="text" name="maxD" value="0-20">
+    <br>
+
+    <label for="root">Start on the roote note?</label>
+    <select name="root">
+        <option value="True">Yes</option>
+        <option value="False">No</option>
+    </select>
+    <br>
+
+    <label for="smallestNote">Shortest Note:</label>
+    <select name="smallestNote">
+        <option value="0">1</option>
+        <option value="1">1/2</option>
+        <option value="2">1/4</option>
+        <option value="3">1/8</option>
+        <option value="4">1/16</option>
+        <option value="5">1/32</option>
+        <option value="6">1/64</option>
+    </select>
+    <br>
+
+    <label for="biggestNote">Longest Note:</label>
+    <select name="biggestNote">
+        <option value="0">1</option>
+        <option value="1">1/2</option>
+        <option value="2">1/4</option>
+        <option value="3">1/8</option>
+        <option value="4">1/16</option>
+        <option value="5">1/32</option>
+        <option value="6">1/64</option>
+    </select>
+    <br>
+
+    <label for="length">Number of measures:</label>
+    <select name="length">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+    <br>
+
+    <label for="startOct">Starting octave</label>
+    <select name="startOct">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <br>
+
+    <label for="name">Name of track:</label>
+    <input type="text" name="name">
+    <br>
+
+    <label for="tempo">Tempo:</label>
+    <input type="text" name="tempo" value="40-200">
+    <br>
+
+    <input type="submit" value="Download MIDI File">
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
