@@ -6,10 +6,7 @@ import sys
 
 # Create dictionary mapping midi number to note.
 
-midi_to_note = {}
-
-for i in range(0, 128):
-    midi_to_note[i] = None
+midi_to_note = {i: None for i in range(0, 128)}
 
 mod_map = {0:'c',1:'cs',2:'d',3:'ds',4:'e',5:'f',6:'fs',7:'g',8:'gs',9:'a',10:'as',11:'b'}
 
@@ -35,8 +32,8 @@ for k, v in midi_to_note.items():
 
 maji = [2, 2, 1, 2, 2, 2, 1]
 mini = [2, 1, 2, 2, 1, 2, 2]
-maji = maji + maji + maji + maji + maji + maji + maji + maji + maji + maji + maji
-mini = mini + mini + mini + mini + mini + mini + mini + mini + mini + mini + mini
+maji = maji*11
+mini = mini*11
 
 def get_midi_scale(key, m):
     scale = []

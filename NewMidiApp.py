@@ -17,7 +17,7 @@ def form():
 
 
 # Define a route for the action of the form, for example '/hello/'
-# We are also defining which type of requests this route is 
+# We are also defining which type of requests this route is
 # accepting: POST requests in this case
 @app.route('/information/', methods=['POST'])
 def information():
@@ -39,7 +39,7 @@ def information():
     new_file = open('myMIDI.mid', 'rb')
 
 
-    return send_file(new_file, mimetype='audio/midi')
+    return send_file(new_file, mimetype='audio/mid', as_attachment=True, attachment_filename=name+'.mid')
 
 if __name__ == '__main__':
     app.run()
